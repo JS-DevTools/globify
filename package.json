@@ -1,8 +1,13 @@
 {
   "name": "globify",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Run browserify and watchify with globs - even on Windows!",
-  "keywords": [],
+  "keywords": [
+    "browserify",
+    "watchify",
+    "glob",
+    "cli"
+  ],
   "author": {
     "name": "James Messinger",
     "url": "https://github.com/BigstickCarpet"
@@ -18,7 +23,7 @@
     "test": "istanbul cover _mocha -- --recursive tests",
     "mocha": "mocha --recursive tests",
     "upgrade": "npm-check-updates -u && npm update",
-    "release": "npm run upgrade && npm run build && npm test && bump --prompt --tag --push --all && npm publish"
+    "release": "npm run upgrade && npm run build && npm test && bump --prerelease --tag --push --all && npm publish"
   },
   "repository": {
     "type": "git",
