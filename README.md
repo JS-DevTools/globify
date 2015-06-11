@@ -7,7 +7,6 @@ Globify
 [![Code Climate Score](https://img.shields.io/codeclimate/github/BigstickCarpet/globify.svg)](https://codeclimate.com/github/BigstickCarpet/globify)
 [![Dependencies](https://img.shields.io/david/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
 [![Inline docs](http://inch-ci.org/github/BigstickCarpet/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/BigstickCarpet/globify)
-[![Downloads](https://img.shields.io/npm/dm/globify.svg)](https://www.npmjs.com/package/globify)
 
 [![npm](http://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
 [![License](https://img.shields.io/npm/l/globify.svg)](LICENSE)
