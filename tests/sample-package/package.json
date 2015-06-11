@@ -1,0 +1,8 @@
+{
+  "name": "sample-package",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "dependencies": {
+    "glob": "^5.0.10"
+  }
+}
