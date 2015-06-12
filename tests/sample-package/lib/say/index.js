@@ -8,3 +8,4 @@
 module.exports = function say(what, who) {
   console.log('%s, %s!', what, who);
 };
+

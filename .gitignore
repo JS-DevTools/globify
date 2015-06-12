@@ -8,3 +8,5 @@ npm-debug.log
 /.idea
 /coverage
 /node_modules
+/tests/sample-package/dist
+/tests/sample-package/**/*.coffee

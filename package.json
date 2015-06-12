@@ -23,7 +23,7 @@
     "test": "istanbul cover _mocha -- --recursive tests",
     "mocha": "mocha --recursive tests",
     "upgrade": "npm-check-updates -u && npm update",
-    "release": "npm run upgrade && npm run build && npm test && bump --prerelease --tag --push --all && npm publish"
+    "release": "npm run upgrade && npm run build && npm test && bump --prompt --tag --push --all && npm publish"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,8 @@
   "dependencies": {
     "browserify": "^10.2.4",
     "glob": "^5.0.10",
+    "mkdirp": "^0.5.1",
+    "touch": "0.0.3",
     "watchify": "^3.2.2"
   }
 }
