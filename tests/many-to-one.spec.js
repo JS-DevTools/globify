@@ -16,7 +16,10 @@ describe('many-to-one', function() {
 
   it('should call browserify GLOB --outfile=FILE', function() {
     globify(['lib/**/*.js', '--outfile=dist/my-file.js']);
-    helper.assert('browserify', ['lib/hello-world.js', 'lib/index.js', 'lib/say/index.js', '--outfile=dist/my-file.js']);
+    helper.assert(
+      'browserify',
+      ['lib/hello-world.js', 'lib/index.js', 'lib/say/index.js', '--outfile=dist/my-file.js']
+    );
   });
 
   it('should call watchify GLOB -o FILE', function() {
