@@ -49,8 +49,8 @@ describe('many-to-many', function() {
     globify(['lib/**/*.js', '-u', '**/hello-*.js', '-o', 'dist']);
     helper.assert(
       'browserify',
-      ['lib/index.js', '-u', '**/hello-*.js', '-o', 'dist/index.js'],
-      ['lib/say/index.js', '-u', '**/hello-*.js', '-o', 'dist/say/index.js']
+      ['lib/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/index.js')],
+      ['lib/say/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/say/index.js')]
     );
   });
 
@@ -58,8 +58,8 @@ describe('many-to-many', function() {
     globify(['lib/**/*.js', '--exclude=**/hello-*.js', '-w', '--outfile=dist']);
     helper.assert(
       'watchify',
-      ['lib/index.js', '--exclude=**/hello-*.js', '--outfile=dist/index.js'],
-      ['lib/say/index.js', '--exclude=**/hello-*.js', '--outfile=dist/say/index.js']
+      ['lib/index.js', '--exclude=**/hello-*.js', '--outfile=' + path.normalize('dist/index.js')],
+      ['lib/say/index.js', '--exclude=**/hello-*.js', '--outfile=' + path.normalize('dist/say/index.js')]
     );
   });
 
