@@ -4,6 +4,7 @@ Globify
 
 [![Build Status](https://img.shields.io/travis/BigstickCarpet/globify.svg)](https://travis-ci.org/BigstickCarpet/globify)
 [![Coverage Status](https://img.shields.io/coveralls/BigstickCarpet/globify.svg)](https://coveralls.io/r/BigstickCarpet/globify)
+[![Codacy Score](http://img.shields.io/codacy/d285fbd0aa424bae8d5d7fd3be7593be.svg)](https://www.codacy.com/public/jamesmessinger/globify)
 [![Code Climate Score](https://img.shields.io/codeclimate/github/BigstickCarpet/globify.svg)](https://codeclimate.com/github/BigstickCarpet/globify)
 [![Dependencies](https://img.shields.io/david/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
 [![Inline docs](http://inch-ci.org/github/BigstickCarpet/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/BigstickCarpet/globify)
@@ -38,13 +39,13 @@ Options:
 
   <entry files glob>
 
-    Glob pattern of entry files. Don't forget to wrap the glob pattern in quotes, 
+    Glob pattern of entry files. Don't forget to wrap the glob pattern in quotes,
     otherwise some shells (like bash) will pre-expand the glob.
 
   --outfile=FILE, -o FILE
 
     If outfile is a file, then a single bundle will be created.  If it's a directory,
-    then separate bundles will be created for each entry file.  You can also specify 
+    then separate bundles will be created for each entry file.  You can also specify
     an output filename pattern, like *.bundled.js
 
   --watch, -w
