@@ -48,6 +48,10 @@ Options:
     then separate bundles will be created for each entry file.  You can also specify
     an output filename pattern, like *.bundled.js
 
+  --exclude=GLOB, -u GLOB
+
+    Excludes files that are matched by the <entry files glob>
+
   --watch, -w
 
     Call watchify instead of browserify.

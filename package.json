@@ -34,7 +34,6 @@
     "coveralls": "^2.11.2",
     "mocha": "^2.2.5",
     "chai": "^3.0.0",
-    "lodash": "^3.9.3",
     "sinon": "^1.15.3",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",
@@ -44,6 +43,7 @@
   "dependencies": {
     "browserify": "^10.2.4",
     "glob": "^5.0.10",
+    "lodash": "^3.9.3",
     "mkdirp": "^0.5.1",
     "touch": "0.0.3",
     "watchify": "^3.2.2"

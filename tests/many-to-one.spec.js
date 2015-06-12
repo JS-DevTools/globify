@@ -27,18 +27,29 @@ describe('many-to-one', function() {
     helper.assert('watchify', ['lib/hello-world.js', 'lib/index.js', 'lib/say/index.js', '-o', 'dist/my-file.js']);
   });
 
+  it('should call browserify GLOB -u GLOB', function() {
+    globify(['lib/**/*.js', '-u', '**/hello-*.js']);
+    helper.assert('browserify', ['lib/index.js', 'lib/say/index.js', '-u', '**/hello-*.js']);
+  });
+
+  it('should call browserify GLOB --exclude=GLOB', function() {
+    globify(['lib/**/*.js', '--exclude=**/hello-*.js', '-w']);
+    helper.assert('watchify', ['lib/index.js', 'lib/say/index.js', '--exclude=**/hello-*.js']);
+  });
+
   it('should call browserify with lots of options', function() {
     globify([
       '-g', 'uglifyify',
       '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', 'dist/my-file.js'
+      'lib/**/*.js', '-g', 'browserify-istanbul',  '-u=**/hello-*.js',
+      '--outfile', 'dist/my-file.js'
     ]);
 
     helper.assert('browserify', [
       '-g', 'uglifyify',
       '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-      'lib/hello-world.js', 'lib/index.js', 'lib/say/index.js', '-g', 'browserify-istanbul',
-      '--outfile', 'dist/my-file.js'
+      'lib/index.js', 'lib/say/index.js', '-g', 'browserify-istanbul',
+       '-u=**/hello-*.js', '--outfile', 'dist/my-file.js'
     ]);
   });
 
@@ -46,14 +57,15 @@ describe('many-to-one', function() {
     globify([
       '-g', 'uglifyify', '-w',
       '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
-      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', 'dist/my-file.js'
+      'lib/**/*.js', '-g', 'browserify-istanbul', '--exclude', '**/hello-*.js',
+      '--outfile', 'dist/my-file.js'
     ]);
 
     helper.assert('watchify', [
       '-g', 'uglifyify',
       '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
-      'lib/hello-world.js', 'lib/index.js', 'lib/say/index.js', '-g', 'browserify-istanbul',
-      '--outfile', 'dist/my-file.js'
+      'lib/index.js', 'lib/say/index.js', '-g', 'browserify-istanbul',
+      '--exclude', '**/hello-*.js', '--outfile', 'dist/my-file.js'
     ]);
   });
 });

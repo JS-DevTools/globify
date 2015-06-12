@@ -45,11 +45,29 @@ describe('many-to-many', function() {
     );
   });
 
+  it('should call browserify GLOB -u GLOB -o DIR', function() {
+    globify(['lib/**/*.js', '-u', '**/hello-*.js', '-o', 'dist']);
+    helper.assert(
+      'browserify',
+      ['lib/index.js', '-u', '**/hello-*.js', '-o', 'dist/index.js'],
+      ['lib/say/index.js', '-u', '**/hello-*.js', '-o', 'dist/say/index.js']
+    );
+  });
+
+  it('should call browserify GLOB --exclude=GLOB --outfile=DIR', function() {
+    globify(['lib/**/*.js', '--exclude=**/hello-*.js', '-w', '--outfile=dist']);
+    helper.assert(
+      'watchify',
+      ['lib/index.js', '--exclude=**/hello-*.js', '--outfile=dist/index.js'],
+      ['lib/say/index.js', '--exclude=**/hello-*.js', '--outfile=dist/say/index.js']
+    );
+  });
+
   it('should call browserify with lots of options', function() {
     globify([
       '-g', 'uglifyify',
       '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', '*.coffee'
+      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', '*.coffee', '-u=**/hello-*.js'
     ]);
 
     helper.assert(
@@ -57,18 +75,13 @@ describe('many-to-many', function() {
       [
         '-g', 'uglifyify',
         '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-        'lib/hello-world.js', '-g', 'browserify-istanbul', '--outfile', 'hello-world.coffee'
-      ],
-      [
-        '-g', 'uglifyify',
-        '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-        'lib/index.js', '-g', 'browserify-istanbul', '--outfile', 'index.coffee'
+        'lib/index.js', '-g', 'browserify-istanbul', '--outfile', 'index.coffee', '-u=**/hello-*.js'
       ],
       [
         '-g', 'uglifyify',
         '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
         'lib/say/index.js', '-g', 'browserify-istanbul',
-        '--outfile', path.normalize('say/index.coffee')
+        '--outfile', path.normalize('say/index.coffee'), '-u=**/hello-*.js'
       ]
     );
   });
@@ -77,7 +90,8 @@ describe('many-to-many', function() {
     globify([
       '-g', 'uglifyify', '-w',
       '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
-      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', 'dist/release/*.coffee'
+      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', 'dist/release/*.coffee',
+      '--exclude', '**/hello-*.js'
     ]);
 
     helper.assert(
@@ -85,20 +99,16 @@ describe('many-to-many', function() {
       [
         '-g', 'uglifyify',
         '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
-        'lib/hello-world.js', '-g', 'browserify-istanbul',
-        '--outfile', path.normalize('dist/release/hello-world.coffee')
-      ],
-      [
-        '-g', 'uglifyify',
-        '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
         'lib/index.js', '-g', 'browserify-istanbul',
-        '--outfile', path.normalize('dist/release/index.coffee')
+        '--outfile', path.normalize('dist/release/index.coffee'),
+      '--exclude', '**/hello-*.js'
       ],
       [
         '-g', 'uglifyify',
         '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
         'lib/say/index.js', '-g', 'browserify-istanbul',
-        '--outfile', path.normalize('dist/release/say/index.coffee')
+        '--outfile', path.normalize('dist/release/say/index.coffee'),
+      '--exclude', '**/hello-*.js'
       ]
     );
   });
