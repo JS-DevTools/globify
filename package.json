@@ -1,6 +1,6 @@
 {
   "name": "globify",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Run browserify and watchify with globs - even on Windows!",
   "keywords": [
     "browserify",
@@ -30,22 +30,22 @@
     "url": "https://github.com/BigstickCarpet/globify.git"
   },
   "devDependencies": {
-    "istanbul": "^0.3.15",
+    "istanbul": "^0.3.17",
     "coveralls": "^2.11.2",
     "mocha": "^2.2.5",
     "chai": "^3.0.0",
-    "sinon": "^1.15.3",
+    "sinon": "^1.15.4",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",
     "npm-check-updates": "^1.5.1",
-    "version-bump-prompt": "^1.3.1"
+    "version-bump-prompt": "^1.4.1"
   },
   "dependencies": {
-    "browserify": "^10.2.4",
-    "glob": "^5.0.10",
-    "lodash": "^3.9.3",
+    "browserify": "^10.2.6",
+    "glob": "^5.0.14",
+    "lodash": "^3.10.0",
     "mkdirp": "^0.5.1",
-    "touch": "0.0.3",
-    "watchify": "^3.2.2"
+    "touch": "0.0.4",
+    "watchify": "^3.2.3"
   }
 }
