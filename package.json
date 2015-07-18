@@ -1,6 +1,6 @@
 {
   "name": "globify",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Run browserify and watchify with globs - even on Windows!",
   "keywords": [
     "browserify",
@@ -33,7 +33,7 @@
     "istanbul": "^0.3.17",
     "coveralls": "^2.11.2",
     "mocha": "^2.2.5",
-    "chai": "^3.0.0",
+    "chai": "^3.1.0",
     "sinon": "^1.15.4",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",
@@ -41,11 +41,11 @@
     "version-bump-prompt": "^1.4.1"
   },
   "dependencies": {
-    "browserify": "^10.2.6",
+    "browserify": "^11.0.0",
     "glob": "^5.0.14",
     "lodash": "^3.10.0",
     "mkdirp": "^0.5.1",
-    "touch": "0.0.4",
-    "watchify": "^3.2.3"
+    "touch": "1.0.0",
+    "watchify": "^3.3.0"
   }
 }
