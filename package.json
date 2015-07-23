@@ -10,7 +10,7 @@
   ],
   "author": {
     "name": "James Messinger",
-    "url": "https://github.com/BigstickCarpet"
+    "url": "http://jamesmessinger.com"
   },
   "license": "MIT",
   "homepage": "https://github.com/BigstickCarpet/globify",
@@ -23,7 +23,8 @@
     "test": "istanbul cover _mocha -- --recursive tests",
     "mocha": "mocha --recursive tests",
     "upgrade": "npm-check-updates -u && npm update",
-    "release": "npm run upgrade && npm run build && npm test && bump --prompt --tag --push --all && npm publish"
+    "bump": "bump --prompt --tag --push --all",
+    "release": "npm run upgrade && npm run build && npm test && npm run bump && npm publish"
   },
   "repository": {
     "type": "git",

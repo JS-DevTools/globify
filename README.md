@@ -19,6 +19,12 @@ Features
 * Optionally create separate browserify bundles for each entry file
 
 
+Related Projects
+--------------------------
+* [simplifyify](https://www.npmjs.com/package/simplifyify) - A simplified Browserify and Watchify CLI
+* [sourcemapify](https://www.npmjs.com/package/sourcemapify) - Sourcemap plugin for Browserify
+
+
 Installation
 --------------------------
 Install using [npm](https://docs.npmjs.com/getting-started/what-is-npm).  Add the `-g` flag to install globally so you can use it from any terminal.
