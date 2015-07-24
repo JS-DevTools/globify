@@ -2,11 +2,11 @@ Globify
 ============================
 #### Run browserify and watchify with globs - even on Windows!
 
-[![Build Status](https://img.shields.io/travis/BigstickCarpet/globify.svg)](https://travis-ci.org/BigstickCarpet/globify)
-[![Coverage Status](https://img.shields.io/coveralls/BigstickCarpet/globify.svg)](https://coveralls.io/r/BigstickCarpet/globify)
-[![Codacy Score](http://img.shields.io/codacy/d285fbd0aa424bae8d5d7fd3be7593be.svg)](https://www.codacy.com/public/jamesmessinger/globify)
-[![Code Climate Score](https://img.shields.io/codeclimate/github/BigstickCarpet/globify.svg)](https://codeclimate.com/github/BigstickCarpet/globify)
-[![Dependencies](https://img.shields.io/david/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
+[![Build Status](https://api.travis-ci.org/BigstickCarpet/globify.svg)](https://travis-ci.org/BigstickCarpet/globify)
+[![Dependencies](https://david-dm.org/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
+[![Coverage Status](https://coveralls.io/repos/BigstickCarpet/globify/badge.svg?branch=master&service=github)](https://coveralls.io/r/BigstickCarpet/globify)
+[![Code Climate Score](https://codeclimate.com/github/BigstickCarpet/globify/badges/gpa.svg)](https://codeclimate.com/github/BigstickCarpet/globify)
+[![Codacy Score](https://www.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/jamesmessinger/globify)
 [![Inline docs](http://inch-ci.org/github/BigstickCarpet/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/BigstickCarpet/globify)
 
 [![npm](http://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
