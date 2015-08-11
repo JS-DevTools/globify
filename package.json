@@ -1,6 +1,6 @@
 {
   "name": "globify",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Run browserify and watchify with globs - even on Windows!",
   "keywords": [
     "browserify",
