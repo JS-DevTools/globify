@@ -15,14 +15,12 @@
   "license": "MIT",
   "homepage": "https://github.com/BigstickCarpet/globify",
   "main": "lib/index.js",
-  "bin": {
-    "globify": "bin/globify.js"
-  },
   "scripts": {
-    "build": "jshint . --verbose && jscs . --verbose",
-    "test": "istanbul cover _mocha -- --recursive tests",
-    "mocha": "mocha --recursive tests",
-    "upgrade": "npm-check-updates -u && npm update",
+    "lint": "jshint . --verbose && jscs . --verbose",
+    "build": "npm run lint",
+    "test": "istanbul cover _mocha -- --bail --recursive tests",
+    "mocha": "mocha --bail --recursive tests",
+    "upgrade": "ncu --upgradeAll && npm update",
     "bump": "bump --prompt --tag --push --all",
     "release": "npm run upgrade && npm run build && npm test && npm run bump && npm publish"
   },
@@ -36,17 +34,20 @@
     "mocha": "^2.2.5",
     "chai": "^3.2.0",
     "sinon": "^1.15.4",
-    "jscs": "^1.13.1",
+    "jscs": "^2.0.0",
     "jshint": "^2.8.0",
-    "npm-check-updates": "^1.5.1",
-    "version-bump-prompt": "^1.4.2"
+    "npm-check-updates": "^2.2.0",
+    "version-bump-prompt": "^1.5.0"
   },
   "dependencies": {
-    "browserify": "^11.0.0",
+    "browserify": "^11.0.1",
     "glob": "^5.0.14",
-    "lodash": "^3.10.0",
+    "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
     "touch": "1.0.0",
-    "watchify": "^3.3.0"
+    "watchify": "^3.3.1"
+  },
+  "bin": {
+    "globify": "bin/globify.js"
   }
 }
