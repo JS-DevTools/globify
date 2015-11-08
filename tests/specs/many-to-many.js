@@ -1,8 +1,8 @@
 'use strict';
 
-var helper  = require('./helper'),
-    globify = require('../'),
-    path =    require('path');
+var helper  = require('../fixtures/helper'),
+    globify = require('../../'),
+    path    = require('path');
 
 describe('many-to-many', function() {
   it('should call browserify GLOB --outfile=FILESPEC', function() {
@@ -101,14 +101,14 @@ describe('many-to-many', function() {
         '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
         'lib/index.js', '-g', 'browserify-istanbul',
         '--outfile', path.normalize('dist/release/index.coffee'),
-      '--exclude', '**/hello-*.js'
+        '--exclude', '**/hello-*.js'
       ],
       [
         '-g', 'uglifyify',
         '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
         'lib/say/index.js', '-g', 'browserify-istanbul',
         '--outfile', path.normalize('dist/release/say/index.coffee'),
-      '--exclude', '**/hello-*.js'
+        '--exclude', '**/hello-*.js'
       ]
     );
   });

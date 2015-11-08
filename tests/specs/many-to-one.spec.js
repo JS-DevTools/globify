@@ -1,7 +1,7 @@
 'use strict';
 
-var helper  = require('./helper'),
-    globify = require('../');
+var helper  = require('../fixtures/helper'),
+    globify = require('../../');
 
 describe('many-to-one', function() {
   it('should call browserify with files matching glob pattern', function() {

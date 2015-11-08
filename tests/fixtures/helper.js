@@ -11,7 +11,7 @@ module.exports = {
 };
 
 // Run all the tests from the "sample-package" directory
-process.chdir(path.join(__dirname, 'sample-package'));
+process.chdir(path.join(__dirname, '../', 'sample-package'));
 
 beforeEach(function() {
   sinon.stub(console, 'log');

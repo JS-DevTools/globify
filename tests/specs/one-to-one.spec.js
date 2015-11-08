@@ -1,7 +1,7 @@
 'use strict';
 
-var helper  = require('./helper'),
-    globify = require('../');
+var helper  = require('../fixtures/helper'),
+    globify = require('../../');
 
 describe('one-to-one (pass-through)', function() {
   it('should call browserify without any args', function() {
