@@ -1,6 +1,13 @@
-languages:
-  JavaScript: true
+engines:
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+    - "bin/*.js"
+    - "lib/**/*.js"
 exclude_paths:
-- "node_modules/*"
-- "tests/*"
-- "coverage/*"
+  - node_modules/**
+  - tests/**
+  - coverage/**
