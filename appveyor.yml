@@ -1,4 +1,6 @@
-# Test against this version of Node.js
+# AppVeyor Config
+# http://www.appveyor.com/docs/lang/nodejs-iojs
+
 environment:
   matrix:
     - nodejs_version: "0.10"
@@ -7,14 +9,12 @@ environment:
     - nodejs_version: "4"
     - nodejs_version: "5"
 
-# Install scripts. (runs after repo cloning)
+skip_tags: true
+
 install:
-  # Get the latest stable version of Node
   - ps: Install-Product node $env:nodejs_version
-  # install modules
   - npm install
 
-# Post-install test scripts.
 test_script:
   # Output useful info for debugging.
   - node --version
@@ -22,5 +22,5 @@ test_script:
   # run tests
   - npm run mocha
 
-# Don't actually build.
+# Don't run MSBuild
 build: off
