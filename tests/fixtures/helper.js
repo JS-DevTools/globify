@@ -3,8 +3,7 @@
 var expect       = require('chai').expect,
     sinon        = require('sinon'),
     path         = require('path'),
-    childProcess = require('child_process'),
-    _            = require('lodash');
+    childProcess = require('child_process');
 
 module.exports = {
   assert: assert
@@ -27,7 +26,7 @@ afterEach(function() {
  * Asserts that the given command was called with the given arguments.
  */
 function assert(cmd, args) {
-  args = _.drop(arguments);
+  args = Array.prototype.slice.call(arguments, 1);
 
   // Make sure each stub was called the correct number of times
   sinon.assert.callCount(console.log, args.length);

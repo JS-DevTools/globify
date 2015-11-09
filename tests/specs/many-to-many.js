@@ -25,6 +25,16 @@ describe('many-to-many', function() {
     );
   });
 
+  it('should call watchify GLOB GLOB -o FILESPEC', function() {
+    globify(['lib/**/index.js', 'lib/**/hello-*.js', '-w', '-o', 'dist/*.js']);
+    helper.assert(
+      'watchify',
+      ['lib/index.js', '-o', path.normalize('dist/index.js')],
+      ['lib/say/index.js', '-o', path.normalize('dist/say/index.js')],
+      ['lib/hello-world.js', '-o', path.normalize('dist/hello-world.js')]
+    );
+  });
+
   it('should call browserify GLOB --outfile=DIR', function() {
     globify(['lib/**/*.js', '--outfile=dist']);
     helper.assert(
@@ -32,6 +42,16 @@ describe('many-to-many', function() {
       ['lib/hello-world.js', '--outfile=' + path.normalize('dist/hello-world.js')],
       ['lib/index.js', '--outfile=' + path.normalize('dist/index.js')],
       ['lib/say/index.js', '--outfile=' + path.normalize('dist/say/index.js')]
+    );
+  });
+
+  it('should call browserify GLOB GLOB --outfile=DIR', function() {
+    globify(['lib/**/index.js', 'lib/**/hello-*.js', '--outfile=dist']);
+    helper.assert(
+      'browserify',
+      ['lib/index.js', '--outfile=' + path.normalize('dist/index.js')],
+      ['lib/say/index.js', '--outfile=' + path.normalize('dist/say/index.js')],
+      ['lib/hello-world.js', '--outfile=' + path.normalize('dist/hello-world.js')]
     );
   });
 
@@ -54,7 +74,16 @@ describe('many-to-many', function() {
     );
   });
 
-  it('should call browserify GLOB --exclude=GLOB --outfile=DIR', function() {
+  it('should call browserify GLOB GLOB -u GLOB -o DIR', function() {
+    globify(['lib/*.js', 'lib/**/hello-*.js', 'lib/**/index.js', '-u', '**/hello-*.js', '-o', 'dist']);
+    helper.assert(
+      'browserify',
+      ['lib/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/index.js')],
+      ['lib/say/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/say/index.js')]
+    );
+  });
+
+  it('should call watchify GLOB --exclude=GLOB --outfile=DIR', function() {
     globify(['lib/**/*.js', '--exclude=**/hello-*.js', '-w', '--outfile=dist']);
     helper.assert(
       'watchify',
@@ -63,11 +92,26 @@ describe('many-to-many', function() {
     );
   });
 
+  it('should call watchify GLOB --exclude=GLOB -u GLOB -u GLOB --exclude=GLOB --outfile=DIR', function() {
+    globify([
+      'lib/**/*.js', '-w', '--outfile=dist',
+      '--exclude=**/hello-*.js', '-u', 'lib/*/index.js', '-u', 'lib/say/index.js', '--exclude=lib/hello-world.*'
+    ]);
+    helper.assert(
+      'watchify',
+      [
+        'lib/index.js', '--outfile=' + path.normalize('dist/index.js'),
+       '--exclude=**/hello-*.js', '-u', 'lib/*/index.js', '-u', 'lib/say/index.js', '--exclude=lib/hello-world.*'
+      ]
+    );
+  });
+
   it('should call browserify with lots of options', function() {
     globify([
       '-g', 'uglifyify',
       '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', '*.coffee', '-u=**/hello-*.js'
+      'lib/**/index.js', 'lib/index.js', 'lib/*.js', 'lib/hello-*',
+      '-g', 'browserify-istanbul', '--outfile', '*.coffee', '-u=**/hello-*.js'
     ]);
 
     helper.assert(
