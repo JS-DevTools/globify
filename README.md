@@ -2,7 +2,7 @@ Globify
 ============================
 #### Run browserify and watchify with globs - even on Windows!
 
-[![Build Status](https://api.travis-ci.org/BigstickCarpet/globify.svg)](https://travis-ci.org/BigstickCarpet/globify)
+[![Build Status](https://api.travis-ci.org/BigstickCarpet/globify.svg?branch=master)](https://travis-ci.org/BigstickCarpet/globify)
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/bigstickcarpet/globify?svg=true&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/BigstickCarpet/globify)
 
 [![Dependencies](https://david-dm.org/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
