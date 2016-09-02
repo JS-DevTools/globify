@@ -35,9 +35,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.12",
-    "eslint": "^1.9.0",
+    "eslint": "^3.4.0",
     "istanbul": "^0.4.5",
-    "jscs": "^2.5.1",
+    "jscs": "^3.0.7",
     "mocha": "^3.0.2",
     "npm-check": "^5.2.3",
     "rimraf": "^2.5.4",
