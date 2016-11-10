@@ -25,6 +25,7 @@ Related Projects
 --------------------------
 * [simplifyify](https://www.npmjs.com/package/simplifyify) - A simplified Browserify and Watchify CLI
 * [sourcemapify](https://www.npmjs.com/package/sourcemapify) - Sourcemap plugin for Browserify
+* [browserify-banner](https://www.npmjs.com/package/browserify-banner) - Add a comment (and/or code) to the top of your Browserify bundle
 
 
 Installation
