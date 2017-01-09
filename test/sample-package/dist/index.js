@@ -12299,8 +12299,8 @@
 }, {}], 2: [function (require, module, exports) {
   'use strict';
 
-let _ = require('lodash'),
-    say = require('./say');
+const _ = require('lodash');
+const say = require('./say');
 
 /**
  * Says hello.
@@ -12317,7 +12317,7 @@ let _ = require('lodash'),
   'use strict';
 
   module.exports = {
-  say: require('./say'),
+  say: require('./say');
   hello: require('./hello-world')
 };
 

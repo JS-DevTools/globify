@@ -1,7 +1,7 @@
 'use strict';
 
-let _ = require('lodash'),
-    say = require('./say');
+const _ = require('lodash');
+const say = require('./say');
 
 /**
  * Says hello.
