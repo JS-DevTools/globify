@@ -5,7 +5,7 @@
  * @param {string} what - What to say
  * @param {string} [who] - Who to say goodbye to
  */
-module.exports = function say(what, who) {
+module.exports = function say (what, who) {
   console.log('%s, %s!', what, who);
 };
 
