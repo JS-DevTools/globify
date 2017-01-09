@@ -18,6 +18,10 @@
   "bin": {
     "globify": "bin/globify.js"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "scripts": {
     "lint": "eslint lib && jscs lib --verbose",
     "build": "npm run lint",
