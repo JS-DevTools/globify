@@ -41,6 +41,7 @@
     "codacy-coverage": "^2.0.0",
     "coveralls": "^2.11.15",
     "eslint": "^3.12.2",
+    "eslint-config-modular": "^2.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "npm-check": "^5.4.0",
