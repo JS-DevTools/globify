@@ -1,9 +1,0 @@
-**/*~
-**/._*
-**/.DS_Store
-npm-debug.log
-/.idea
-/coverage
-/node_modules
-/tests
-/.*
