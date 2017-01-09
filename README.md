@@ -7,7 +7,6 @@ Globify
 
 [![Dependencies](https://david-dm.org/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
 [![Coverage Status](https://coveralls.io/repos/BigstickCarpet/globify/badge.svg?branch=master&service=github)](https://coveralls.io/r/BigstickCarpet/globify)
-[![Code Climate Score](https://codeclimate.com/github/BigstickCarpet/globify/badges/gpa.svg)](https://codeclimate.com/github/BigstickCarpet/globify)
 [![Codacy Score](https://www.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/jamesmessinger/globify)
 [![Inline docs](http://inch-ci.org/github/BigstickCarpet/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/BigstickCarpet/globify)
 
@@ -159,8 +158,7 @@ To build/test the project locally on your computer:
 `npm run build`
 
 4. __Run the unit tests__<br>
-`npm run mocha` (just the tests)<br>
-`npm test` (tests + code coverage)
+`npm test`
 
 
 License
