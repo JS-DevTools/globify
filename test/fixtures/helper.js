@@ -14,7 +14,7 @@ process.chdir(path.join(__dirname, '../', 'sample-package'));
 
 beforeEach(() => {
   sinon.stub(childProcess, 'fork');
-  sinon.stub(console, 'log', captureLogs);
+  sinon.stub(console, 'log').callsFake(captureLogs);
 });
 
 afterEach(() => {
