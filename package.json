@@ -35,26 +35,26 @@
     "release": "npm run upgrade && npm test && npm run bump && npm publish"
   },
   "devDependencies": {
-    "chai": "^4.0.1",
-    "codacy-coverage": "^2.0.0",
-    "coveralls": "^2.11.15",
-    "eslint": "^3.12.2",
-    "eslint-config-modular": "^4.0.0",
+    "chai": "^4.1.2",
+    "codacy-coverage": "^2.0.3",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.11.0",
+    "eslint-config-modular": "^4.1.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "npm-check": "^5.4.0",
-    "rimraf": "^2.5.4",
-    "sinon": "^2.3.2",
-    "version-bump-prompt": "^3.0.1"
+    "mocha": "^4.0.1",
+    "npm-check": "^5.5.2",
+    "rimraf": "^2.6.2",
+    "sinon": "^4.1.2",
+    "version-bump-prompt": "^4.0.0"
   },
   "dependencies": {
-    "browserify": "^14.4.0",
-    "commander": "^2.9.0",
-    "glob": "^7.1.1",
+    "browserify": "^14.5.0",
+    "commander": "^2.11.0",
+    "glob": "^7.1.2",
     "globby": "^6.1.0",
     "mkdirp": "^0.5.1",
-    "touch": "1.0.0",
-    "watchify": "^3.8.0"
+    "touch": "^3.1.0",
+    "watchify": "^3.9.0"
   },
   "engines": {
     "node": ">=4"
