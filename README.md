@@ -6,7 +6,7 @@ Globify
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/bigstickcarpet/globify?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/BigstickCarpet/globify)
 
 [![Coverage Status](https://coveralls.io/repos/BigstickCarpet/globify/badge.svg?branch=master&service=github)](https://coveralls.io/r/BigstickCarpet/globify)
-[![Codacy Score](https://www.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/jamesmessinger/globify)
+[![Codacy Score](https://api.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/jamesmessinger/globify)
 [![Inline docs](http://inch-ci.org/github/BigstickCarpet/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/BigstickCarpet/globify)
 [![Dependencies](https://david-dm.org/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
 
