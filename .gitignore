@@ -36,7 +36,7 @@ pids
 node_modules
 
 # Test output
-lib-cov
+/.nyc_output
 /coverage
 /tests/sample-package/dist
 /tests/sample-package/**/*.coffee
