@@ -10,13 +10,13 @@
   ],
   "author": {
     "name": "James Messinger",
-    "url": "http://bigstickcarpet.com"
+    "url": "https://jamesmessinger.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/BigstickCarpet/globify",
+  "homepage": "https://github.com/James-Messinger/globify",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BigstickCarpet/globify.git"
+    "url": "https://github.com/James-Messinger/globify.git"
   },
   "main": "lib/index.js",
   "bin": {

@@ -2,13 +2,13 @@ Globify
 ============================
 #### Run browserify and watchify with globs - even on Windows!
 
-[![Build Status](https://api.travis-ci.org/BigstickCarpet/globify.svg?branch=master)](https://travis-ci.org/BigstickCarpet/globify)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/bigstickcarpet/globify?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/BigstickCarpet/globify)
+[![Build Status](https://api.travis-ci.org/James-Messinger/globify.svg?branch=master)](https://travis-ci.org/James-Messinger/globify)
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/james-messinger/globify?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/BigstickCarpet/globify)
 
 [![Coverage Status](https://coveralls.io/repos/BigstickCarpet/globify/badge.svg?branch=master&service=github)](https://coveralls.io/r/BigstickCarpet/globify)
 [![Codacy Score](https://api.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/jamesmessinger/globify)
-[![Inline docs](http://inch-ci.org/github/BigstickCarpet/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/BigstickCarpet/globify)
-[![Dependencies](https://david-dm.org/BigstickCarpet/globify.svg)](https://david-dm.org/BigstickCarpet/globify)
+[![Inline docs](http://inch-ci.org/github/James-Messinger/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/James-Messinger/globify)
+[![Dependencies](https://david-dm.org/James-Messinger/globify.svg)](https://david-dm.org/James-Messinger/globify)
 
 [![npm](http://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
 [![License](https://img.shields.io/npm/l/globify.svg)](LICENSE)
@@ -143,13 +143,13 @@ watchify -g uglifyify lib/subdir/another-entry-file.js -v -d -o dist/subdir/anot
 
 Contributing
 --------------------------
-I welcome any contributions, enhancements, and bug-fixes.  [File an issue](https://github.com/BigstickCarpet/globify/issues) on GitHub and [submit a pull request](https://github.com/BigstickCarpet/globify/pulls).
+I welcome any contributions, enhancements, and bug-fixes.  [File an issue](https://github.com/James-Messinger/globify/issues) on GitHub and [submit a pull request](https://github.com/James-Messinger/globify/pulls).
 
 #### Building/Testing
 To build/test the project locally on your computer:
 
 1. __Clone this repo__<br>
-`git clone https://github.com/BigstickCarpet/globify.git`
+`git clone https://github.com/James-Messinger/globify.git`
 
 2. __Install dependencies__<br>
 `npm install`
