@@ -7,10 +7,10 @@ Globify
 
 [![Coverage Status](https://coveralls.io/repos/github/James-Messinger/globify/badge.svg?branch=master)](https://coveralls.io/github/James-Messinger/globify)
 [![Codacy Score](https://api.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/jamesmessinger/globify)
-[![Inline docs](http://inch-ci.org/github/James-Messinger/globify.svg?branch=master&style=shields)](http://inch-ci.org/github/James-Messinger/globify)
+[![Inline docs](https://inch-ci.org/github/James-Messinger/globify.svg?branch=master&style=shields)](https://inch-ci.org/github/James-Messinger/globify)
 [![Dependencies](https://david-dm.org/James-Messinger/globify.svg)](https://david-dm.org/James-Messinger/globify)
 
-[![npm](http://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
+[![npm](https://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
 [![License](https://img.shields.io/npm/l/globify.svg)](LICENSE)
 
 
