@@ -2,13 +2,13 @@ Globify
 ============================
 #### Run browserify and watchify with globs - even on Windows!
 
-[![Build Status](https://api.travis-ci.org/James-Messinger/globify.svg?branch=master)](https://travis-ci.org/James-Messinger/globify)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/james-messinger/globify?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/BigstickCarpet/globify)
+[![Build Status](https://api.travis-ci.org/JS-DevTools/globify.svg?branch=master)](https://travis-ci.org/JS-DevTools/globify)
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/JS-DevTools/globify?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/JamesMessinger/globify)
 
-[![Coverage Status](https://coveralls.io/repos/github/James-Messinger/globify/badge.svg?branch=master)](https://coveralls.io/github/James-Messinger/globify)
-[![Codacy Score](https://api.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/jamesmessinger/globify)
-[![Inline docs](https://inch-ci.org/github/James-Messinger/globify.svg?branch=master&style=shields)](https://inch-ci.org/github/James-Messinger/globify)
-[![Dependencies](https://david-dm.org/James-Messinger/globify.svg)](https://david-dm.org/James-Messinger/globify)
+[![Coverage Status](https://coveralls.io/repos/github/JS-DevTools/globify/badge.svg?branch=master)](https://coveralls.io/github/JS-DevTools/globify)
+[![Codacy Score](https://api.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/JamesMessinger/globify)
+[![Inline docs](https://inch-ci.org/github/JS-DevTools/globify.svg?branch=master&style=shields)](https://inch-ci.org/github/JS-DevTools/globify)
+[![Dependencies](https://david-dm.org/JS-DevTools/globify.svg)](https://david-dm.org/JS-DevTools/globify)
 
 [![npm](https://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
 [![License](https://img.shields.io/npm/l/globify.svg)](LICENSE)
@@ -143,13 +143,13 @@ watchify -g uglifyify lib/subdir/another-entry-file.js -v -d -o dist/subdir/anot
 
 Contributing
 --------------------------
-I welcome any contributions, enhancements, and bug-fixes.  [File an issue](https://github.com/James-Messinger/globify/issues) on GitHub and [submit a pull request](https://github.com/James-Messinger/globify/pulls).
+I welcome any contributions, enhancements, and bug-fixes.  [File an issue](https://github.com/JS-DevTools/globify/issues) on GitHub and [submit a pull request](https://github.com/JS-DevTools/globify/pulls).
 
 #### Building/Testing
 To build/test the project locally on your computer:
 
 1. __Clone this repo__<br>
-`git clone https://github.com/James-Messinger/globify.git`
+`git clone https://github.com/JS-DevTools/globify.git`
 
 2. __Install dependencies__<br>
 `npm install`
