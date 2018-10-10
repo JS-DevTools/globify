@@ -40,7 +40,7 @@ Usage
 --------------------------
 The command-line interface is identical to [browserify](https://github.com/substack/node-browserify#usage) and [watchify](https://github.com/substack/watchify#usage).  In fact, globify simply passes your arguments straight to browserify or watchify (after expanding the glob pattern).
 
-```bash
+```
 globify <entry files glob>  [options]
 
 Options:
