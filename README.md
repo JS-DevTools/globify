@@ -6,8 +6,6 @@ Globify
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/JS-DevTools/globify?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/JamesMessinger/globify)
 
 [![Coverage Status](https://coveralls.io/repos/github/JS-DevTools/globify/badge.svg?branch=master)](https://coveralls.io/github/JS-DevTools/globify)
-[![Codacy Score](https://api.codacy.com/project/badge/d285fbd0aa424bae8d5d7fd3be7593be)](https://www.codacy.com/public/JamesMessinger/globify)
-[![Inline docs](https://inch-ci.org/github/JS-DevTools/globify.svg?branch=master&style=shields)](https://inch-ci.org/github/JS-DevTools/globify)
 [![Dependencies](https://david-dm.org/JS-DevTools/globify.svg)](https://david-dm.org/JS-DevTools/globify)
 
 [![npm](https://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
