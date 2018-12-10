@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Mocha configuration
 beforeEach(function () {

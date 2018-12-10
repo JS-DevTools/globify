@@ -1,158 +1,158 @@
-'use strict';
+"use strict";
 
-const helper = require('../fixtures/helper');
-const globify = require('../../');
-const path = require('path');
+const helper = require("../fixtures/helper");
+const globify = require("../../");
+const path = require("path");
 
-describe('many-to-many', () => {
-  it('should call browserify GLOB --outfile=FILESPEC', () => {
-    globify(['lib/**/*.js', '--outfile=dist/**/*.bundle.min.js']);
+describe("many-to-many", () => {
+  it("should call browserify GLOB --outfile=FILESPEC", () => {
+    globify(["lib/**/*.js", "--outfile=dist/**/*.bundle.min.js"]);
     helper.assert(
-      'browserify',
-      ['lib/hello-world.js', '--outfile=' + path.normalize('dist/hello-world.bundle.min.js')],
-      ['lib/index.js', '--outfile=' + path.normalize('dist/index.bundle.min.js')],
-      ['lib/say/index.js', '--outfile=' + path.normalize('dist/say/index.bundle.min.js')]
+      "browserify",
+      ["lib/hello-world.js", "--outfile=" + path.normalize("dist/hello-world.bundle.min.js")],
+      ["lib/index.js", "--outfile=" + path.normalize("dist/index.bundle.min.js")],
+      ["lib/say/index.js", "--outfile=" + path.normalize("dist/say/index.bundle.min.js")]
     );
   });
 
-  it('should call watchify GLOB -o FILESPEC', () => {
-    globify(['lib/**/*.js', '-w', '-o', 'dist/*.js']);
+  it("should call watchify GLOB -o FILESPEC", () => {
+    globify(["lib/**/*.js", "-w", "-o", "dist/*.js"]);
     helper.assert(
-      'watchify',
-      ['lib/hello-world.js', '-o', path.normalize('dist/hello-world.js')],
-      ['lib/index.js', '-o', path.normalize('dist/index.js')],
-      ['lib/say/index.js', '-o', path.normalize('dist/say/index.js')]
+      "watchify",
+      ["lib/hello-world.js", "-o", path.normalize("dist/hello-world.js")],
+      ["lib/index.js", "-o", path.normalize("dist/index.js")],
+      ["lib/say/index.js", "-o", path.normalize("dist/say/index.js")]
     );
   });
 
-  it('should call watchify GLOB GLOB -o FILESPEC', () => {
-    globify(['lib/**/index.js', 'lib/**/hello-*.js', '-w', '-o', 'dist/*.js']);
+  it("should call watchify GLOB GLOB -o FILESPEC", () => {
+    globify(["lib/**/index.js", "lib/**/hello-*.js", "-w", "-o", "dist/*.js"]);
     helper.assert(
-      'watchify',
-      ['lib/index.js', '-o', path.normalize('dist/index.js')],
-      ['lib/say/index.js', '-o', path.normalize('dist/say/index.js')],
-      ['lib/hello-world.js', '-o', path.normalize('dist/hello-world.js')]
+      "watchify",
+      ["lib/index.js", "-o", path.normalize("dist/index.js")],
+      ["lib/say/index.js", "-o", path.normalize("dist/say/index.js")],
+      ["lib/hello-world.js", "-o", path.normalize("dist/hello-world.js")]
     );
   });
 
-  it('should call browserify GLOB --outfile=DIR', () => {
-    globify(['lib/**/*.js', '--outfile=dist']);
+  it("should call browserify GLOB --outfile=DIR", () => {
+    globify(["lib/**/*.js", "--outfile=dist"]);
     helper.assert(
-      'browserify',
-      ['lib/hello-world.js', '--outfile=' + path.normalize('dist/hello-world.js')],
-      ['lib/index.js', '--outfile=' + path.normalize('dist/index.js')],
-      ['lib/say/index.js', '--outfile=' + path.normalize('dist/say/index.js')]
+      "browserify",
+      ["lib/hello-world.js", "--outfile=" + path.normalize("dist/hello-world.js")],
+      ["lib/index.js", "--outfile=" + path.normalize("dist/index.js")],
+      ["lib/say/index.js", "--outfile=" + path.normalize("dist/say/index.js")]
     );
   });
 
-  it('should call browserify GLOB GLOB --outfile=DIR', () => {
-    globify(['lib/**/index.js', 'lib/**/hello-*.js', '--outfile=dist']);
+  it("should call browserify GLOB GLOB --outfile=DIR", () => {
+    globify(["lib/**/index.js", "lib/**/hello-*.js", "--outfile=dist"]);
     helper.assert(
-      'browserify',
-      ['lib/index.js', '--outfile=' + path.normalize('dist/index.js')],
-      ['lib/say/index.js', '--outfile=' + path.normalize('dist/say/index.js')],
-      ['lib/hello-world.js', '--outfile=' + path.normalize('dist/hello-world.js')]
+      "browserify",
+      ["lib/index.js", "--outfile=" + path.normalize("dist/index.js")],
+      ["lib/say/index.js", "--outfile=" + path.normalize("dist/say/index.js")],
+      ["lib/hello-world.js", "--outfile=" + path.normalize("dist/hello-world.js")]
     );
   });
 
-  it('should call watchify GLOB -o DIR', () => {
-    globify(['lib/**/*.js', '-o', 'dist', '--watch']);
+  it("should call watchify GLOB -o DIR", () => {
+    globify(["lib/**/*.js", "-o", "dist", "--watch"]);
     helper.assert(
-      'watchify',
-      ['lib/hello-world.js', '-o', path.normalize('dist/hello-world.js')],
-      ['lib/index.js', '-o', path.normalize('dist/index.js')],
-      ['lib/say/index.js', '-o', path.normalize('dist/say/index.js')]
+      "watchify",
+      ["lib/hello-world.js", "-o", path.normalize("dist/hello-world.js")],
+      ["lib/index.js", "-o", path.normalize("dist/index.js")],
+      ["lib/say/index.js", "-o", path.normalize("dist/say/index.js")]
     );
   });
 
-  it('should call browserify GLOB -u GLOB -o DIR', () => {
-    globify(['lib/**/*.js', '-u', '**/hello-*.js', '-o', 'dist']);
+  it("should call browserify GLOB -u GLOB -o DIR", () => {
+    globify(["lib/**/*.js", "-u", "**/hello-*.js", "-o", "dist"]);
     helper.assert(
-      'browserify',
-      ['lib/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/index.js')],
-      ['lib/say/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/say/index.js')]
+      "browserify",
+      ["lib/index.js", "-u", "**/hello-*.js", "-o", path.normalize("dist/index.js")],
+      ["lib/say/index.js", "-u", "**/hello-*.js", "-o", path.normalize("dist/say/index.js")]
     );
   });
 
-  it('should call browserify GLOB GLOB -u GLOB -o DIR', () => {
-    globify(['lib/*.js', 'lib/**/hello-*.js', 'lib/**/index.js', '-u', '**/hello-*.js', '-o', 'dist']);
+  it("should call browserify GLOB GLOB -u GLOB -o DIR", () => {
+    globify(["lib/*.js", "lib/**/hello-*.js", "lib/**/index.js", "-u", "**/hello-*.js", "-o", "dist"]);
     helper.assert(
-      'browserify',
-      ['lib/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/index.js')],
-      ['lib/say/index.js', '-u', '**/hello-*.js', '-o', path.normalize('dist/say/index.js')]
+      "browserify",
+      ["lib/index.js", "-u", "**/hello-*.js", "-o", path.normalize("dist/index.js")],
+      ["lib/say/index.js", "-u", "**/hello-*.js", "-o", path.normalize("dist/say/index.js")]
     );
   });
 
-  it('should call watchify GLOB --exclude=GLOB --outfile=DIR', () => {
-    globify(['lib/**/*.js', '--exclude=**/hello-*.js', '-w', '--outfile=dist']);
+  it("should call watchify GLOB --exclude=GLOB --outfile=DIR", () => {
+    globify(["lib/**/*.js", "--exclude=**/hello-*.js", "-w", "--outfile=dist"]);
     helper.assert(
-      'watchify',
-      ['lib/index.js', '--exclude=**/hello-*.js', '--outfile=' + path.normalize('dist/index.js')],
-      ['lib/say/index.js', '--exclude=**/hello-*.js', '--outfile=' + path.normalize('dist/say/index.js')]
+      "watchify",
+      ["lib/index.js", "--exclude=**/hello-*.js", "--outfile=" + path.normalize("dist/index.js")],
+      ["lib/say/index.js", "--exclude=**/hello-*.js", "--outfile=" + path.normalize("dist/say/index.js")]
     );
   });
 
-  it('should call watchify GLOB --exclude=GLOB -u GLOB -u GLOB --exclude=GLOB --outfile=DIR', () => {
+  it("should call watchify GLOB --exclude=GLOB -u GLOB -u GLOB --exclude=GLOB --outfile=DIR", () => {
     globify([
-      'lib/**/*.js', '-w', '--outfile=dist',
-      '--exclude=**/hello-*.js', '-u', 'lib/*/index.js', '-u', 'lib/say/index.js', '--exclude=lib/hello-world.*'
+      "lib/**/*.js", "-w", "--outfile=dist",
+      "--exclude=**/hello-*.js", "-u", "lib/*/index.js", "-u", "lib/say/index.js", "--exclude=lib/hello-world.*"
     ]);
     helper.assert(
-      'watchify',
+      "watchify",
       [
-        'lib/index.js', '--outfile=' + path.normalize('dist/index.js'),
-        '--exclude=**/hello-*.js', '-u', 'lib/*/index.js', '-u', 'lib/say/index.js', '--exclude=lib/hello-world.*'
+        "lib/index.js", "--outfile=" + path.normalize("dist/index.js"),
+        "--exclude=**/hello-*.js", "-u", "lib/*/index.js", "-u", "lib/say/index.js", "--exclude=lib/hello-world.*"
       ]
     );
   });
 
-  it('should call browserify with lots of options', () => {
+  it("should call browserify with lots of options", () => {
     globify([
-      '-g', 'uglifyify',
-      '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-      'lib/**/index.js', 'lib/index.js', 'lib/*.js', 'lib/hello-*',
-      '-g', 'browserify-istanbul', '--outfile', '*.coffee', '-u=**/hello-*.js'
+      "-g", "uglifyify",
+      "-t", "[", "foo-bar", "--biz", "-baz", "--watch", "hello, world", "*.html", "]",
+      "lib/**/index.js", "lib/index.js", "lib/*.js", "lib/hello-*",
+      "-g", "browserify-istanbul", "--outfile", "*.coffee", "-u=**/hello-*.js"
     ]);
 
     helper.assert(
-      'browserify',
+      "browserify",
       [
-        '-g', 'uglifyify',
-        '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-        'lib/index.js', '-g', 'browserify-istanbul', '--outfile', 'index.coffee', '-u=**/hello-*.js'
+        "-g", "uglifyify",
+        "-t", "[", "foo-bar", "--biz", "-baz", "--watch", "hello, world", "*.html", "]",
+        "lib/index.js", "-g", "browserify-istanbul", "--outfile", "index.coffee", "-u=**/hello-*.js"
       ],
       [
-        '-g', 'uglifyify',
-        '-t', '[', 'foo-bar', '--biz', '-baz', '--watch', 'hello, world', '*.html', ']',
-        'lib/say/index.js', '-g', 'browserify-istanbul',
-        '--outfile', path.normalize('say/index.coffee'), '-u=**/hello-*.js'
+        "-g", "uglifyify",
+        "-t", "[", "foo-bar", "--biz", "-baz", "--watch", "hello, world", "*.html", "]",
+        "lib/say/index.js", "-g", "browserify-istanbul",
+        "--outfile", path.normalize("say/index.coffee"), "-u=**/hello-*.js"
       ]
     );
   });
 
-  it('should call watchify with lots of options', () => {
+  it("should call watchify with lots of options", () => {
     globify([
-      '-g', 'uglifyify', '-w',
-      '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
-      'lib/**/*.js', '-g', 'browserify-istanbul', '--outfile', 'dist/release/*.coffee',
-      '--exclude', '**/hello-*.js'
+      "-g", "uglifyify", "-w",
+      "-t", "[", "foo-bar", "--biz", "-baz", "hello, world", "*.html", "]",
+      "lib/**/*.js", "-g", "browserify-istanbul", "--outfile", "dist/release/*.coffee",
+      "--exclude", "**/hello-*.js"
     ]);
 
     helper.assert(
-      'watchify',
+      "watchify",
       [
-        '-g', 'uglifyify',
-        '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
-        'lib/index.js', '-g', 'browserify-istanbul',
-        '--outfile', path.normalize('dist/release/index.coffee'),
-        '--exclude', '**/hello-*.js'
+        "-g", "uglifyify",
+        "-t", "[", "foo-bar", "--biz", "-baz", "hello, world", "*.html", "]",
+        "lib/index.js", "-g", "browserify-istanbul",
+        "--outfile", path.normalize("dist/release/index.coffee"),
+        "--exclude", "**/hello-*.js"
       ],
       [
-        '-g', 'uglifyify',
-        '-t', '[', 'foo-bar', '--biz', '-baz', 'hello, world', '*.html', ']',
-        'lib/say/index.js', '-g', 'browserify-istanbul',
-        '--outfile', path.normalize('dist/release/say/index.coffee'),
-        '--exclude', '**/hello-*.js'
+        "-g", "uglifyify",
+        "-t", "[", "foo-bar", "--biz", "-baz", "hello, world", "*.html", "]",
+        "lib/say/index.js", "-g", "browserify-istanbul",
+        "--outfile", path.normalize("dist/release/say/index.coffee"),
+        "--exclude", "**/hello-*.js"
       ]
     );
   });

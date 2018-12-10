@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-'use strict';
+"use strict";
 
-const globify = require('../');
+const globify = require("../");
 globify(process.argv.slice(2));
