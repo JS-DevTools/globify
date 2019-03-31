@@ -20,14 +20,20 @@ Features
 
 Related Projects
 --------------------------
-* [simplifyify](https://www.npmjs.com/package/simplifyify) - A simplified Browserify and Watchify CLI
-* [sourcemapify](https://www.npmjs.com/package/sourcemapify) - Sourcemap plugin for Browserify
-* [browserify-banner](https://www.npmjs.com/package/browserify-banner) - Add a comment (and/or code) to the top of your Browserify bundle
+- [simplifyify](https://jsdevtools.org/simplifyify)<br>
+  A simplified Browserify and Watchify CLI
+
+- [sourcemapify](https://jsdevtools.org/sourcemapify)<br>
+  Sourcemap plugin for Browserify
+
+- [browserify-banner](https://jsdevtools.org/browserify-banner)<br>
+  Add a comment (and/or code) to the top of your Browserify bundle
+
 
 
 Installation
 --------------------------
-Install using [npm](https://docs.npmjs.com/getting-started/what-is-npm).  Add the `-g` flag to install globally so you can use it from any terminal.
+Install using [npm](https://docs.npmjs.com/about-npm/).  Add the `-g` flag to install globally so you can use it from any terminal.
 
 ```bash
 npm install -g globify
