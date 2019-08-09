@@ -36,20 +36,20 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "coveralls": "^3.0.4",
-    "eslint": "^6.0.1",
+    "coveralls": "^3.0.6",
+    "eslint": "^6.1.0",
     "eslint-config-modular": "^7.0.0",
-    "mocha": "^6.1.4",
+    "mocha": "^6.2.0",
     "npm-check": "^5.9.0",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3",
-    "sinon": "^7.3.2",
-    "version-bump-prompt": "^5.0.3"
+    "sinon": "^7.4.1",
+    "version-bump-prompt": "^5.0.4"
   },
   "dependencies": {
-    "browserify": "^16.2.3",
-    "commander": "^2.20.0",
-    "globby": "^10.0.0",
+    "browserify": "^16.5.0",
+    "commander": "^3.0.0",
+    "globby": "^10.0.1",
     "mkdirp": "^0.5.1",
     "touch": "^3.1.0",
     "watchify": "^3.11.1"
