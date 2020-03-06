@@ -27,12 +27,13 @@
     "lib"
   ],
   "scripts": {
+    "clean": "shx rm -rf .nyc_output coverage",
     "lint": "eslint bin lib test/fixtures test/specs",
     "test": "mocha && npm run lint",
     "coverage": "nyc --reporter=text --reporter=lcov node_modules/mocha/bin/mocha",
     "upgrade": "npm-check -u && npm audit fix",
     "bump": "bump --tag --push --all",
-    "release": "npm run upgrade && npm test && npm run bump"
+    "release": "npm run upgrade && npm run clean && npm test && npm run bump"
   },
   "devDependencies": {
     "@jsdevtools/eslint-config-modular": "^8.0.0",
@@ -42,6 +43,7 @@
     "mocha": "^7.1.0",
     "npm-check": "^5.9.0",
     "nyc": "^15.0.0",
+    "shx": "^0.3.2",
     "sinon": "^9.0.0"
   },
   "dependencies": {
