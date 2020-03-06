@@ -1,2 +1,2 @@
 extends:
-  - modular/test
+  - "@jsdevtools/modular/test"
