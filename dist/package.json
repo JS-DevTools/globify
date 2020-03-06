@@ -1,0 +1,35 @@
+{
+  "name": "globify",
+  "version": "X.X.X",
+  "description": "Run browserify and watchify with globs - even on Windows!",
+  "keywords": [
+    "browserify",
+    "watchify",
+    "glob",
+    "cli"
+  ],
+  "author": {
+    "name": "James Messinger",
+    "url": "https://jamesmessinger.com"
+  },
+  "license": "MIT",
+  "homepage": "https://jstools.dev/globify",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JS-DevTools/globify.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "globify": "globify.js"
+  },
+  "files": [
+    "globify.js",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@jsdevtools/globify": "X.X.X"
+  }
+}
