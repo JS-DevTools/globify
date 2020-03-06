@@ -8,8 +8,8 @@ Globify
 [![Coverage Status](https://coveralls.io/repos/github/JS-DevTools/globify/badge.svg?branch=master)](https://coveralls.io/github/JS-DevTools/globify)
 [![Dependencies](https://david-dm.org/JS-DevTools/globify.svg)](https://david-dm.org/JS-DevTools/globify)
 
-[![npm](https://img.shields.io/npm/v/globify.svg)](https://www.npmjs.com/package/globify)
-[![License](https://img.shields.io/npm/l/globify.svg)](LICENSE)
+[![npm](https://img.shields.io/npm/v/@jsdevtools/globify.svg)](https://www.npmjs.com/package/@jsdevtools/globify)
+[![License](https://img.shields.io/npm/l/@jsdevtools/globify.svg)](LICENSE)
 
 
 Features
@@ -36,7 +36,7 @@ Installation
 Install using [npm](https://docs.npmjs.com/about-npm/).  Add the `-g` flag to install globally so you can use it from any terminal.
 
 ```bash
-npm install -g globify
+npm install -g @jsdevtools/globify
 ```
 
 
