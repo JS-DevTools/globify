@@ -2,8 +2,8 @@ Globify
 ============================
 #### Run browserify and watchify with globs - even on Windows!
 
-[![Cross-Platform Compatibility](https://jstools.dev/img/badges/os-badges.svg)](https://travis-ci.com/JS-DevTools/globify)
-[![Build Status](https://api.travis-ci.com/JS-DevTools/globify.svg?branch=master)](https://travis-ci.com/JS-DevTools/globify)
+[![Cross-Platform Compatibility](https://jstools.dev/img/badges/os-badges.svg)](https://github.com/JS-DevTools/globify/blob/master/.github/workflows/CI-CD.yaml)
+[![Build Status](https://github.com/JS-DevTools/globify/workflows/CI-CD/badge.svg)](https://github.com/JS-DevTools/globify/blob/master/.github/workflows/CI-CD.yaml)
 
 [![Coverage Status](https://coveralls.io/repos/github/JS-DevTools/globify/badge.svg?branch=master)](https://coveralls.io/github/JS-DevTools/globify)
 [![Dependencies](https://david-dm.org/JS-DevTools/globify.svg)](https://david-dm.org/JS-DevTools/globify)
