@@ -36,8 +36,8 @@
     "release": "npm run upgrade && npm run clean && npm test && npm run bump"
   },
   "devDependencies": {
-    "@jsdevtools/eslint-config-modular": "^8.0.3",
-    "@jsdevtools/version-bump-prompt": "^6.0.3",
+    "@jsdevtools/eslint-config": "^1.0.3",
+    "@jsdevtools/version-bump-prompt": "^6.0.5",
     "chai": "^4.2.0",
     "eslint": "^7.4.0",
     "mocha": "^8.0.1",
