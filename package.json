@@ -1,6 +1,6 @@
 {
   "name": "@jsdevtools/globify",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Run browserify and watchify with globs - even on Windows!",
   "keywords": [
     "browserify",
